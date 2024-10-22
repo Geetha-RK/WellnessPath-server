@@ -7,7 +7,7 @@ router.route("/")
         .get(doctorsController.index)
         // .post(...validateWarehouse, doctorsController.add);
 
-router.route("/:id")
+router.route("/:docId")
         .get(doctorsController.findOne)
         // .put(...validateWarehouse, doctorsController.update)
         // .delete(doctorsController.remove);

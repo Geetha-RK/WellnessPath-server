@@ -41,7 +41,6 @@ const findBySpecialization = async (req,res) => {
 const findOne = async (req,res) => {
     const { docId } = req.params;
     if (!docId || isNaN(docId)) {
-        console.log("here:",docId);
         return res.status(400).json({ message: "Invalid doctor ID" });
     }
 

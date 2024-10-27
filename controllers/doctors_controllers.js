@@ -37,17 +37,21 @@ const findBySpecialization = async (req,res) => {
     }
 }
 
-//find doctor by id: /api/doctor/:id
+//find doctor by id: /api/doctors/:docId
 const findOne = async (req,res) => {
-    const { id } = req.params;
+    const { docId } = req.params;
+    if (!docId || isNaN(docId)) {
+        return res.status(400).json({ message: "Invalid doctor ID" });
+    }
+
     try{
-        const doctor = await knex("doctors").where({ doctor_id: id }).first();
+        const doctor = await knex("doctors").where({ doctor_id: docId }).first();
         if(!doctor){
             return res.status(404).json({ message: "Doctor not found" });
         }
         res.status(200).json(doctor);
     }catch(error){
-        res.status(500).json({ message:"unable to retrive doctor data" });
+        res.status(500).json({ message:"unable to retrive doctor data by id" });
     }
 };
 

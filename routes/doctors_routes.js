@@ -10,6 +10,6 @@ router.route("/:docId")
         .get(doctorsController.findOne)
 
 router.route("/specialization/:specialization")
-            .get(doctorsController.findBySpecialization)
+        .get(doctorsController.findBySpecialization)
 
 export default router;

@@ -4,7 +4,6 @@ import configuration from "../knexfile.js";
 const knex = initKnex(configuration);
 
 const add = async (req, res) => {
-// app.post('/api/appointments', async (req, res) => {
     const { patientId, doctorId, dateTime } = req.body;
 
     // Validate input
@@ -59,7 +58,7 @@ const getbooked =  async (req, res) => {
 };
 
 const getAppointmentsForPatient = async (req, res) => {
-    const { patientId } = req.params;
+    const { patientId } = req.body;
 
     try {
         const appointments = await knex('appointments')

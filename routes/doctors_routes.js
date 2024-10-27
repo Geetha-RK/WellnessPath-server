@@ -5,17 +5,11 @@ const router = express.Router();
 
 router.route("/")
         .get(doctorsController.index)
-        // .post(...validateWarehouse, doctorsController.add);
 
 router.route("/:docId")
         .get(doctorsController.findOne)
-        // .put(...validateWarehouse, doctorsController.update)
-        // .delete(doctorsController.remove);
 
 router.route("/specialization/:specialization")
             .get(doctorsController.findBySpecialization)
-
-// router.route("/:id/inventories")
-        // .get(warehouseController.findInventories);
 
 export default router;

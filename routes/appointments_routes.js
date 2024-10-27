@@ -4,7 +4,6 @@ import * as appointmentsController from "../controllers/appointments_controllers
 const router = express.Router();
 
 router.route("/")
-        // .get(appointmentsController.index)
         .post(appointmentsController.add);
 
 router.route('/my-appointment/:patientId')

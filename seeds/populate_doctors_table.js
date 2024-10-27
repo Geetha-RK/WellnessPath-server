@@ -9,7 +9,7 @@ export async function seed(knex) {
     {
       first_name: 'Emily',
       last_name: 'Johnson',
-      specialization: 'General Physician',
+      specialization: 'General-Physician',
       image: 'http://localhost:8080/uploads/doc1.jpg',
       contact_number: '+1 (646) 123-1234',
       email: 'emily.johnson@example.com',
@@ -107,7 +107,7 @@ export async function seed(knex) {
     {
       first_name: 'Daniel',
       last_name: 'Martinez',
-      specialization: 'General Physician',
+      specialization: 'General-Physician',
       image: 'http://localhost:8080/uploads/doc-12.jpg',
       contact_number: '+1 (645) 178-1184',
       email: 'daniel.martinez@example.com',
@@ -163,7 +163,7 @@ export async function seed(knex) {
     {
       first_name: 'William',
       last_name: 'Wilson',
-      specialization: 'General Physician',
+      specialization: 'General-Physician',
       image: 'http://localhost:8080/uploads/doc-14.jpg',
       contact_number: '+1 (646) 763-3844',
       email: 'william.wilson@example.com',

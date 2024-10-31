@@ -11,7 +11,8 @@ app.use(express.json());
 const PORT = process.env.PORT || 5050;
 
 // Use CORS to allow cross-origin requests
-app.use(cors());
+// app.use(cors());
+app.use( cors({ origin: `https://wellnesspath.netlify.app/`, }) );
 // Serve static files from the uploads directory
 
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
